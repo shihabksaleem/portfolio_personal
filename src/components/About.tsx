@@ -29,27 +29,27 @@ const About = () => {
               <div className="prose prose-lg text-gray-700">
                 <p>
                   I'm a dedicated Flutter developer who fell in love with mobile app development 
-                  during my computer science studies. What started as curiosity about creating 
-                  mobile apps has evolved into a passion for crafting beautiful, performant 
-                  cross-platform applications.
+                  during my computer science studies. I specialize in creating educational technology 
+                  solutions and have developed comprehensive applications for Luminar Technolab, 
+                  including student learning management systems and attendance tracking platforms.
                 </p>
                 
                 <p>
-                  My expertise spans the entire mobile development lifecycle, from initial 
-                  concept and UI/UX design to deployment and maintenance. I specialize in 
-                  Flutter and Dart, with strong knowledge of native Android and iOS development 
-                  when needed.
+                  My expertise spans the entire mobile development lifecycle, with particular 
+                  strength in educational applications, video streaming platforms, and attendance 
+                  management systems. I've successfully delivered applications that serve hundreds 
+                  of students and faculty members at Luminar Technolab.
                 </p>
                 
                 <p>
-                  When I'm not coding, you'll find me exploring new technologies, contributing 
-                  to open-source projects, or sharing my knowledge through blog posts and 
-                  community meetups.
+                  I'm passionate about leveraging technology to enhance education and streamline 
+                  academic processes. My applications focus on user experience, performance, and 
+                  scalability to ensure they can handle real-world educational environments.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {['Flutter', 'Dart', 'Firebase', 'REST APIs', 'Git', 'Figma'].map((skill) => (
+                {['Flutter', 'Dart', 'Firebase', 'Video Streaming', 'Geolocation', 'QR Scanner', 'REST APIs', 'Git'].map((skill) => (
                   <span
                     key={skill}
                     className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium"

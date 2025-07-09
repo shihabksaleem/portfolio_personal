@@ -9,8 +9,8 @@ const Skills = () => {
       skills: [
         { name: 'Flutter', level: 95 },
         { name: 'Dart', level: 90 },
-        { name: 'Android (Java/Kotlin)', level: 80 },
-        { name: 'iOS (Swift)', level: 70 }
+        { name: 'Video Streaming', level: 85 },
+        { name: 'QR Code Integration', level: 80 }
       ]
     },
     {
@@ -18,19 +18,19 @@ const Skills = () => {
       title: 'Backend & Database',
       skills: [
         { name: 'Firebase', level: 85 },
+        { name: 'Cloud Firestore', level: 90 },
         { name: 'REST APIs', level: 90 },
-        { name: 'SQLite', level: 80 },
-        { name: 'GraphQL', level: 75 }
+        { name: 'Real-time Database', level: 85 }
       ]
     },
     {
       icon: Cloud,
-      title: 'Cloud & DevOps',
+      title: 'Specialized Features',
       skills: [
-        { name: 'Google Cloud', level: 80 },
-        { name: 'AWS', level: 75 },
-        { name: 'CI/CD', level: 85 },
-        { name: 'Docker', level: 70 }
+        { name: 'Geolocation Services', level: 85 },
+        { name: 'Push Notifications', level: 80 },
+        { name: 'Offline Storage', level: 85 },
+        { name: 'Performance Analytics', level: 80 }
       ]
     },
     {
@@ -38,7 +38,7 @@ const Skills = () => {
       title: 'Design & Tools',
       skills: [
         { name: 'Figma', level: 85 },
-        { name: 'Adobe XD', level: 80 },
+        { name: 'UI/UX Design', level: 80 },
         { name: 'Git', level: 90 },
         { name: 'VS Code', level: 95 }
       ]

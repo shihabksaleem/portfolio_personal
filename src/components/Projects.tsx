@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Smartphone, ShoppingCart, Heart, MessageCircle } from 'lucide-react';
+import { ExternalLink, Github, Smartphone, GraduationCap, Users, Calendar, Play, BarChart3, Clock, CheckCircle } from 'lucide-react';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -7,67 +7,77 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce App',
-      description: 'A full-featured e-commerce mobile application with user authentication, product catalog, shopping cart, and payment integration.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Flutter', 'Firebase', 'Stripe', 'Provider'],
-      category: 'ecommerce',
-      icon: ShoppingCart,
+      title: 'Luminar Technolab - Student Learning Platform',
+      description: 'Comprehensive mobile application for students to access recorded video lectures, track academic performance, manage coursework, and monitor learning progress with interactive dashboards.',
+      image: 'https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Flutter', 'Dart', 'Firebase', 'Video Player', 'Provider', 'REST APIs'],
+      category: 'education',
+      icon: GraduationCap,
+      features: [
+        'Video lecture streaming and offline download',
+        'Academic performance tracking and analytics',
+        'Interactive course management system',
+        'Progress monitoring with visual charts',
+        'Assignment submission and grading',
+        'Student dashboard with personalized insights'
+      ],
       github: '#',
       demo: '#'
     },
     {
       id: 2,
-      title: 'Social Media App',
-      description: 'Instagram-like social media platform with photo sharing, stories, real-time messaging, and user profiles.',
-      image: 'https://images.pexels.com/photos/1552617/pexels-photo-1552617.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Flutter', 'Firebase', 'Cloud Storage', 'Bloc'],
-      category: 'social',
-      icon: MessageCircle,
+      title: 'Luminar Attendance Management System',
+      description: 'Efficient mobile application for automated attendance marking with real-time tracking, reporting, and analytics for both students and administrators.',
+      image: 'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Flutter', 'Dart', 'Firebase', 'Geolocation', 'QR Scanner', 'Cloud Firestore'],
+      category: 'productivity',
+      icon: CheckCircle,
+      features: [
+        'QR code-based attendance marking',
+        'GPS location verification',
+        'Real-time attendance tracking',
+        'Automated report generation',
+        'Student and admin dashboards',
+        'Push notifications for attendance alerts'
+      ],
       github: '#',
       demo: '#'
     },
     {
       id: 3,
-      title: 'Fitness Tracker',
-      description: 'Health and fitness tracking app with workout plans, progress tracking, and integration with wearable devices.',
-      image: 'https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Flutter', 'SQLite', 'Health Kit', 'Charts'],
-      category: 'health',
-      icon: Heart,
+      title: 'E-Commerce Mobile App',
+      description: 'Full-featured e-commerce application with user authentication, product catalog, shopping cart, payment integration, and order management.',
+      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Flutter', 'Firebase', 'Stripe', 'Provider', 'REST APIs'],
+      category: 'ecommerce',
+      icon: Smartphone,
+      features: [
+        'Product catalog with search and filters',
+        'Shopping cart and wishlist functionality',
+        'Secure payment gateway integration',
+        'Order tracking and history',
+        'User profiles and authentication',
+        'Push notifications for offers'
+      ],
       github: '#',
       demo: '#'
     },
     {
       id: 4,
-      title: 'Task Manager',
-      description: 'Productivity app for managing tasks, projects, and deadlines with team collaboration features.',
+      title: 'Task Management App',
+      description: 'Productivity application for managing tasks, projects, and deadlines with team collaboration features and progress tracking.',
       image: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Flutter', 'Firebase', 'Push Notifications', 'Riverpod'],
+      technologies: ['Flutter', 'Firebase', 'Push Notifications', 'Riverpod', 'Local Storage'],
       category: 'productivity',
-      icon: Smartphone,
-      github: '#',
-      demo: '#'
-    },
-    {
-      id: 5,
-      title: 'Weather App',
-      description: 'Beautiful weather application with location-based forecasts, weather alerts, and interactive maps.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Flutter', 'OpenWeather API', 'Maps', 'Animations'],
-      category: 'utility',
-      icon: Smartphone,
-      github: '#',
-      demo: '#'
-    },
-    {
-      id: 6,
-      title: 'Music Player',
-      description: 'Feature-rich music player with playlist management, equalizer, and streaming capabilities.',
-      image: 'https://images.pexels.com/photos/744318/pexels-photo-744318.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Flutter', 'Audio Players', 'Spotify API', 'GetX'],
-      category: 'entertainment',
-      icon: Smartphone,
+      icon: BarChart3,
+      features: [
+        'Task creation and assignment',
+        'Project timeline management',
+        'Team collaboration tools',
+        'Progress tracking and analytics',
+        'Deadline reminders',
+        'File sharing and comments'
+      ],
       github: '#',
       demo: '#'
     }
@@ -75,12 +85,9 @@ const Projects = () => {
 
   const filters = [
     { id: 'all', label: 'All Projects' },
-    { id: 'ecommerce', label: 'E-Commerce' },
-    { id: 'social', label: 'Social' },
-    { id: 'health', label: 'Health' },
+    { id: 'education', label: 'Education' },
     { id: 'productivity', label: 'Productivity' },
-    { id: 'utility', label: 'Utility' },
-    { id: 'entertainment', label: 'Entertainment' }
+    { id: 'ecommerce', label: 'E-Commerce' }
   ];
 
   const filteredProjects = activeFilter === 'all' 
@@ -96,7 +103,7 @@ const Projects = () => {
               Featured Projects
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Explore my portfolio of mobile applications built with Flutter and modern technologies
+              Explore my portfolio of Flutter applications, including educational platforms and productivity tools for Luminar Technolab
             </p>
 
             {/* Filter Buttons */}
@@ -105,10 +112,10 @@ const Projects = () => {
                 <button
                   key={filter.id}
                   onClick={() => setActiveFilter(filter.id)}
-                  className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                     activeFilter === filter.id
-                      ? 'bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      ? 'bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-lg transform scale-105'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:scale-105'
                   }`}
                 >
                   {filter.label}
@@ -118,54 +125,70 @@ const Projects = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-500 border border-gray-100"
               >
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
                   />
                   <div className="absolute top-4 left-4">
-                    <div className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center">
-                      <project.icon className="h-5 w-5 text-blue-600" />
+                    <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
+                      <project.icon className="h-6 w-6 text-blue-600" />
                     </div>
                   </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
                 
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
                   
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  {/* Key Features */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Key Features</h4>
+                    <div className="grid grid-cols-1 gap-2">
+                      {project.features.slice(0, 3).map((feature, index) => (
+                        <div key={index} className="flex items-center text-sm text-gray-600">
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium"
+                        className="px-3 py-1 bg-gradient-to-r from-blue-50 to-teal-50 text-blue-700 rounded-full text-xs font-medium border border-blue-100"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
                   
+                  {/* Action Buttons */}
                   <div className="flex space-x-4">
                     <a
                       href={project.github}
-                      className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="flex items-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-300"
                     >
                       <Github className="h-4 w-4" />
-                      <span className="text-sm">Code</span>
+                      <span className="text-sm font-medium">View Code</span>
                     </a>
                     <a
                       href={project.demo}
-                      className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300"
                     >
                       <ExternalLink className="h-4 w-4" />
-                      <span className="text-sm">Demo</span>
+                      <span className="text-sm font-medium">Live Demo</span>
                     </a>
                   </div>
                 </div>
@@ -173,17 +196,53 @@ const Projects = () => {
             ))}
           </div>
 
+          {/* Luminar Technolab Highlight */}
+          <div className="mt-16 bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-8 border border-blue-100">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Luminar Technolab Partnership</h3>
+              <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+                Developed comprehensive educational technology solutions for Luminar Technolab, including a student learning management system and attendance tracking application. These applications serve hundreds of students and faculty members, streamlining educational processes and enhancing learning experiences.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
+                    <Play className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Video Learning</h4>
+                  <p className="text-sm text-gray-600">Seamless video streaming and offline access</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
+                    <BarChart3 className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Performance Tracking</h4>
+                  <p className="text-sm text-gray-600">Real-time academic progress monitoring</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
+                    <Clock className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Attendance Management</h4>
+                  <p className="text-sm text-gray-600">Automated attendance with GPS verification</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Call to Action */}
           <div className="text-center mt-16">
             <p className="text-gray-600 mb-6">
-              Want to see more? Check out my GitHub for additional projects and contributions.
+              Interested in seeing more projects or discussing a collaboration?
             </p>
             <a
-              href="#"
+              href="#contact"
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
-              <Github className="h-5 w-5" />
-              <span>View All Projects</span>
+              <span>Get In Touch</span>
+              <ExternalLink className="h-5 w-5" />
             </a>
           </div>
         </div>
